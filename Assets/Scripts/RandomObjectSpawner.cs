@@ -9,6 +9,7 @@ public class RandomObjectSpawner : MonoBehaviour
 
     [Header("Spawn Settings")]
     [SerializeField] float spawnChance = 5f;                //Default settings
+    [SerializeField] LayerMask spawnBlock;
 
     [Header("Raycast Settings")]
     [SerializeField] float distanceBetweenCheck = 0.5f;    //Default settings
@@ -20,11 +21,6 @@ public class RandomObjectSpawner : MonoBehaviour
     private void Start()
     {
         SpawnPrefabs();
-    }
-
-    private void Update()
-    {
-        DeletePrefab();
     }
 
     void SpawnPrefabs()
@@ -45,10 +41,5 @@ public class RandomObjectSpawner : MonoBehaviour
                 }
             }
         }
-    }
-
-    void DeletePrefab()
-    {
-
     }
 }
